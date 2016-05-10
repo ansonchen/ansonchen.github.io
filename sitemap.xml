@@ -2,42 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/05/10/duoshuostyle/</loc>
+    <loc>http://ansonchen.github.io/2016/05/10/google/</loc>
+    
+    <lastmod>2016-05-10T05:49:35.782Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ansonchen.github.io/2016/05/06/hello-world/</loc>
+    
+    <lastmod>2016-05-10T05:13:48.061Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ansonchen.github.io/2016/05/10/duoshuostyle/</loc>
     
     <lastmod>2016-05-10T04:39:50.011Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/05/10/mdedit/</loc>
+    <loc>http://ansonchen.github.io/2016/05/10/mdedit/</loc>
     
     <lastmod>2016-05-10T04:36:57.492Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>http://ansonchen.github.io/about/index.html</loc>
     
     <lastmod>2016-05-09T09:35:42.566Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/05/06/hello-world/</loc>
-    
-    <lastmod>2016-05-09T07:39:40.670Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/05/09/ES6/</loc>
+    <loc>http://ansonchen.github.io/2016/05/09/ES6/</loc>
     
     <lastmod>2016-05-09T07:13:32.152Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/search/index.html</loc>
+    <loc>http://ansonchen.github.io/search/index.html</loc>
     
     <lastmod>2016-05-06T10:05:58.055Z</lastmod>
     
