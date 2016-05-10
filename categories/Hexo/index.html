@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>分类 : Hexo | html + css + js</title>
+    <title>分类 : hexo | html + css + js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="ansonchen">
@@ -14,7 +14,7 @@
     <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="html + css + js">
-<meta property="og:url" content="http://ansonchen.github.io/categories/Hexo/index.html">
+<meta property="og:url" content="http://ansonchen.github.io/categories/hexo/index.html">
 <meta property="og:site_name" content="html + css + js">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -77,7 +77,7 @@
         
 
 <div class="archive-title" >
-  <h2 class="category-icon">Hexo</h2>
+  <h2 class="category-icon">hexo</h2>
   
 </div>
 <div id="main" class="archive-part clearfix">
@@ -85,13 +85,13 @@
 
   <section class="post" itemscope itemprop="blogPost">
   
-    <a href="/2016/05/06/hello-world/" title="Hexo 相关" itemprop="url">
+    <a href="/2016/05/10/hexosearch/" title="动手打造无依赖 hexo search (基于jacman)" itemprop="url">
   
 
-    <time datetime="2016-05-06T08:10:20.977Z" itemprop="datePublished">2016-05-06</time>
+    <time datetime="2016-05-10T08:20:48.699Z" itemprop="datePublished">2016-05-10</time>
 
 
-    <h1 itemprop="name">Hexo 相关</h1>
+    <h1 itemprop="name">动手打造无依赖 hexo search (基于jacman)</h1>
 
   </a>
 </section>
@@ -152,7 +152,13 @@
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 <script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
+<script src="/js/search.js"></script> 
+	<script type="text/javascript">    
+		if(document.getElementById('local-search-result')){
+     	var path = "/search.xml";
+     	searchFunc(path, 'local-search-input', 'local-search-result');
+			}
+   </script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){

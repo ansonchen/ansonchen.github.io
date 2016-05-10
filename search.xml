@@ -1,101 +1,12 @@
-
- <!DOCTYPE HTML>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
+<?xml version="1.0" encoding="utf-8"?>
+<search>
   
-    <title>html + css + js</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  
     
-    <meta name="author" content="ansonchen">
-    
-
-    
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="html + css + js">
-<meta property="og:url" content="http://ansonchen.github.io/index.html">
-<meta property="og:site_name" content="html + css + js">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html + css + js">
-<meta name="twitter:description">
-<meta name="twitter:creator" content="@https://twitter.com/ansontw">
-<link rel="publisher" href="101799212101565496157">
-
-    
-    <link rel="alternative" href="/atom.xml" title="html + css + js" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-
-  <body>
-    <header>
-      
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/lemur_256.png" alt="html + css + js" title="html + css + js"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="html + css + js">html + css + js</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">主页 | Home</a></li>
-					
-						<li><a href="/archives">归档 | Archives</a></li>
-					
-						<li><a href="/about">简介 | About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/10/hexosearch/" title="动手打造无依赖 hexo search (基于jacman)" itemprop="url">动手打造无依赖 hexo search (基于jacman)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-10T08:20:48.699Z" itemprop="datePublished"> 发表于 2016-05-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>网上对hexo的搜索基本上都是依赖于<code>google</code>、<code>x度</code>、<code>swiftype</code>的，区区一个搜索，何必依赖于第三方，哈哈，只见我大笔一挥，留下四个字，easy job.</p>
+    <entry>
+      <title><![CDATA[动手打造无依赖 hexo search (基于jacman)]]></title>
+      <url>http://ansonchen.github.io/2016/05/10/hexosearch/</url>
+      <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>网上对hexo的搜索基本上都是依赖于<code>google</code>、<code>x度</code>、<code>swiftype</code>的，区区一个搜索，何必依赖于第三方，哈哈，只见我大笔一挥，留下四个字，easy job.</p>
 <h2 id="具体修改方法"><a href="#具体修改方法" class="headerlink" title="具体修改方法"></a>具体修改方法</h2><blockquote>
 <p>搜索结果预览，可以在本站输入试试</p>
 </blockquote>
@@ -118,133 +29,21 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.search-result-list</span></span><br><span class="line">  <span class="selector-tag">background</span> <span class="selector-id">#ddd</span></span><br><span class="line"><span class="selector-class">.local-search-input</span></span><br><span class="line">  <span class="selector-tag">width</span> 90%</span><br><span class="line">  <span class="selector-tag">height</span> 34<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">padding</span> 6<span class="selector-tag">px</span> 12<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">margin</span> 20<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">font-size</span> 14<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">line-height</span>: 34<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-id">#555555</span></span><br><span class="line">  <span class="selector-tag">background</span> <span class="selector-id">#ffffff</span></span><br><span class="line">  <span class="selector-tag">border</span> 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#cccccc</span></span><br><span class="line">  <span class="selector-tag">border-radius</span> 4<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">box-shadow</span> <span class="selector-tag">inset</span> 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.075</span>)</span><br></pre></td></tr></table></figure>
 <p>添加<code>search.js</code> 文件到目录 <code>themes\jacman\source\js</code> 文件内容如下，可直接下载本站文件<a href="/js/search.js">search.js</a></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)</span></span><br><span class="line"><span class="comment">// Copyright (C) 2015 </span></span><br><span class="line"><span class="comment">// Joseph Pan &lt;http://github.com/wzpan&gt;</span></span><br><span class="line"><span class="comment">// Shuhao Mao &lt;http://github.com/maoshuhao&gt;</span></span><br><span class="line"><span class="comment">// This library is free software; you can redistribute it and/or modify</span></span><br><span class="line"><span class="comment">// it under the terms of the GNU Lesser General Public License as</span></span><br><span class="line"><span class="comment">// published by the Free Software Foundation; either version 2.1 of the</span></span><br><span class="line"><span class="comment">// License, or (at your option) any later version.</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// This library is distributed in the hope that it will be useful, but</span></span><br><span class="line"><span class="comment">// WITHOUT ANY WARRANTY; without even the implied warranty of</span></span><br><span class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></span><br><span class="line"><span class="comment">// Lesser General Public License for more details.</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// You should have received a copy of the GNU Lesser General Public</span></span><br><span class="line"><span class="comment">// License along with this library; if not, write to the Free Software</span></span><br><span class="line"><span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA</span></span><br><span class="line"><span class="comment">// 02110-1301 USA</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Modify:Ansonchen 75526201@qq.com </span></span><br><span class="line"></span><br><span class="line">      		</span><br><span class="line"><span class="keyword">var</span> searchPost = <span class="function"><span class="keyword">function</span>(<span class="params">key,datas,resultObj</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">var</span> str=<span class="string">'&lt;div class=\"search-result-list\"&gt;'</span>;                </span><br><span class="line">                <span class="keyword">var</span> keywords = key.trim().toLowerCase().split(<span class="regexp">/[\s\-]+/</span>);</span><br><span class="line">				</span><br><span class="line">                resultObj.innerHTML = <span class="string">""</span>;</span><br><span class="line">                <span class="keyword">if</span> (key.trim().length &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                datas.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> isMatch = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">var</span> content_index = [];                                                       </span><br><span class="line">                    <span class="keyword">if</span> (!data.title || data.title.trim() === <span class="string">''</span>) &#123;</span><br><span class="line">                        data.title = <span class="string">"Untitled"</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">var</span> data_title = data.title.trim().toLowerCase();     </span><br><span class="line">                    <span class="keyword">var</span> data_content = data.content.trim().replace(<span class="regexp">/&lt;[^&gt;]+&gt;/g</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line">                    <span class="keyword">var</span> data_url = data.url;</span><br><span class="line">                    <span class="keyword">var</span> index_title = <span class="number">-1</span>;</span><br><span class="line">                    <span class="keyword">var</span> index_content = <span class="number">-1</span>;</span><br><span class="line">                    <span class="keyword">var</span> first_occur = <span class="number">-1</span>;</span><br><span class="line">                    <span class="comment">// only match artiles with not empty contents</span></span><br><span class="line">                    <span class="keyword">if</span> (data_content !== <span class="string">''</span>) &#123;</span><br><span class="line">                        keywords.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">keyword, i</span>) </span>&#123;</span><br><span class="line">                            index_title = data_title.indexOf(keyword);</span><br><span class="line">                            index_content = data_content.indexOf(keyword);</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>( index_title &lt; <span class="number">0</span> &amp;&amp; index_content &lt; <span class="number">0</span> )&#123;</span><br><span class="line">                                isMatch = <span class="literal">false</span>;</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                <span class="keyword">if</span> (index_content &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                                    index_content = <span class="number">0</span>;</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                                    first_occur = index_content;</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="comment">// content_index.push(&#123;index_content:index_content, keyword_len:keyword_len&#125;);</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        isMatch = <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">// show search results</span></span><br><span class="line">                    <span class="keyword">if</span> (isMatch) &#123;</span><br><span class="line">                        str += <span class="string">"&lt;article class='post-expand post' itemprop='articleBody'&gt;&lt;header class='article-info clearfix'&gt;&lt;h1 itemprop='name'&gt;&lt;a href='"</span>+ data_url +<span class="string">"' class='search-result-title'&gt;"</span>+ data_title +<span class="string">"&lt;/a&gt;&lt;/h1&gt;&lt;/header&gt;&lt;div class='article-content'&gt;"</span>;</span><br><span class="line">                        <span class="keyword">var</span> content = data.content.trim().replace(<span class="regexp">/&lt;[^&gt;]+&gt;/g</span>,<span class="string">""</span>);</span><br><span class="line">                        <span class="keyword">if</span> (first_occur &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                            <span class="comment">// cut out 100 characters</span></span><br><span class="line">                            <span class="keyword">var</span> start = first_occur - <span class="number">20</span>;</span><br><span class="line">                            <span class="keyword">var</span> end = first_occur + <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>(start &lt; <span class="number">0</span>)&#123;</span><br><span class="line">                                start = <span class="number">0</span>;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>(start == <span class="number">0</span>)&#123;</span><br><span class="line">                                end = <span class="number">100</span>;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>(end &gt; content.length)&#123;</span><br><span class="line">                                end = content.length;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">var</span> match_content = content.substr(start, end); </span><br><span class="line"></span><br><span class="line">                            <span class="comment">// highlight all keywords</span></span><br><span class="line">                            keywords.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">keyword</span>)</span>&#123;</span><br><span class="line">                                <span class="keyword">var</span> regS = <span class="keyword">new</span> <span class="built_in">RegExp</span>(keyword, <span class="string">"gi"</span>);</span><br><span class="line">                                match_content = match_content.replace(regS, <span class="string">"&lt;code class=\"search-keyword\"&gt;"</span>+keyword+<span class="string">"&lt;/code&gt;"</span>);</span><br><span class="line">                            &#125;);</span><br><span class="line">                            </span><br><span class="line">                            str += <span class="string">"&lt;p class=\"search-result\"&gt;"</span> + match_content +<span class="string">"...&lt;/p&gt;"</span></span><br><span class="line">                        &#125;</span><br><span class="line">                        str += <span class="string">"&lt;/div&gt;&lt;footer class='article-footer clearfix'&gt;&lt;/footer&gt;&lt;/article&gt;"</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">                str += <span class="string">"&lt;/div&gt;"</span>;</span><br><span class="line">                resultObj.innerHTML = str;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> searchFunc = <span class="function"><span class="keyword">function</span>(<span class="params">path, search_id, content_id</span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url: path,</span><br><span class="line">        dataType: <span class="string">"xml"</span>,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params"> xmlResponse </span>) </span>&#123;</span><br><span class="line">            <span class="comment">// get the contents from search data</span></span><br><span class="line">            <span class="keyword">var</span> datas = $( <span class="string">"entry"</span>, xmlResponse ).map(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    title: $( <span class="string">"title"</span>, <span class="keyword">this</span> ).text(),</span><br><span class="line">                    content: $(<span class="string">"content"</span>,<span class="keyword">this</span>).text(),</span><br><span class="line">                    url: $( <span class="string">"url"</span> , <span class="keyword">this</span>).text()</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;).get();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> $input = <span class="built_in">document</span>.getElementById(search_id);</span><br><span class="line">            <span class="keyword">var</span> $resultContent = <span class="built_in">document</span>.getElementById(content_id);</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">var</span> match = location.search.match(<span class="regexp">/q=([^&amp;]*)(&amp;|$)/</span>);			</span><br><span class="line">			<span class="keyword">if</span>(match &amp;&amp; match[<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">var</span> keys = <span class="built_in">decodeURIComponent</span>(match[<span class="number">1</span>]); </span><br><span class="line">				</span><br><span class="line">				searchPost(keys,datas,$resultContent);</span><br><span class="line">				$input.value = keys;</span><br><span class="line">			  &#125;</span><br><span class="line">			</span><br><span class="line">            $input.addEventListener(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">				</span><br><span class="line">				 <span class="keyword">var</span> keys = <span class="keyword">this</span>.value;				</span><br><span class="line">				 searchPost(keys,datas,$resultContent);</span><br><span class="line">            &#125;);</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Enjoy-The-End"><a href="#Enjoy-The-End" class="headerlink" title="Enjoy. The End."></a>Enjoy. The End.</h3>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/hexo/">hexo</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/search/">search</a><a href="/tags/jacman/">jacman</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/10/hexosearch/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/10/hexosearch/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
+<h3 id="Enjoy-The-End"><a href="#Enjoy-The-End" class="headerlink" title="Enjoy. The End."></a>Enjoy. The End.</h3>]]></content>
+    </entry>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/10/google/" title="chrome 直接下载官方安装包" itemprop="url">chrome 直接下载官方安装包</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-10T05:45:22.764Z" itemprop="datePublished"> 发表于 2016-05-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="chrome官方直接下载完整安装包"><a href="#chrome官方直接下载完整安装包" class="headerlink" title="chrome官方直接下载完整安装包"></a>chrome官方直接下载完整安装包</h3><p><a href="https://www.google.com/chrome/browser/desktop/index.html?system=true&amp;standalone=1" target="_blank" rel="external">chrome下载</a></p>
+    <entry>
+      <title><![CDATA[chrome 直接下载官方安装包]]></title>
+      <url>http://ansonchen.github.io/2016/05/10/google/</url>
+      <content type="html"><![CDATA[<h3 id="chrome官方直接下载完整安装包"><a href="#chrome官方直接下载完整安装包" class="headerlink" title="chrome官方直接下载完整安装包"></a>chrome官方直接下载完整安装包</h3><p><a href="https://www.google.com/chrome/browser/desktop/index.html?system=true&amp;standalone=1" target="_blank" rel="external">chrome下载</a></p>
 <p><code>前提是可以翻墙</code></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/chrome/">chrome</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/chrome/">chrome</a><a href="/tags/google/">google</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/10/google/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/10/google/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
+]]></content>
+    </entry>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/10/mdedit/" title="md 编辑 常用标签" itemprop="url">md 编辑 常用标签</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-10T02:08:05.166Z" itemprop="datePublished"> 发表于 2016-05-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 标题一</span></span><br><span class="line"><span class="comment">## 标题二</span></span><br><span class="line"><span class="comment">### 标题三</span></span><br></pre></td></tr></table></figure>
+    <entry>
+      <title><![CDATA[md 编辑 常用标签]]></title>
+      <url>http://ansonchen.github.io/2016/05/10/mdedit/</url>
+      <content type="html"><![CDATA[<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 标题一</span></span><br><span class="line"><span class="comment">## 标题二</span></span><br><span class="line"><span class="comment">### 标题三</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>列表一</li>
 <li>列表二</li>
@@ -296,69 +95,13 @@
 <blockquote>
 <p>图为：李健首张专辑《似水流年》封面</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg <span class="string">"李健首张专辑《似水流年》封面"</span>)</span><br><span class="line">&gt; 图为：李健首张专辑《似水流年》封面</span><br></pre></td></tr></table></figure>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/md/">md</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/md/">md</a><a href="/tags/tag/">tag</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/10/mdedit/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/10/mdedit/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg <span class="string">"李健首张专辑《似水流年》封面"</span>)</span><br><span class="line">&gt; 图为：李健首张专辑《似水流年》封面</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/10/duoshuostyle/" title="本站自定义样式" itemprop="url">本站自定义样式</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-10T01:37:59.887Z" itemprop="datePublished"> 发表于 2016-05-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="jacman-修改样式如下"><a href="#jacman-修改样式如下" class="headerlink" title="jacman 修改样式如下"></a>jacman 修改样式如下</h2><blockquote>
+    <entry>
+      <title><![CDATA[本站自定义样式]]></title>
+      <url>http://ansonchen.github.io/2016/05/10/duoshuostyle/</url>
+      <content type="html"><![CDATA[<h2 id="jacman-修改样式如下"><a href="#jacman-修改样式如下" class="headerlink" title="jacman 修改样式如下"></a>jacman 修改样式如下</h2><blockquote>
 <p>替换article.styl 文件内容 查找到<code>table</code> 将<code>table 以后</code>的内容替换成下面的内容</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">table</span></span><br><span class="line">      <span class="selector-tag">max-width</span> 100%</span><br><span class="line">      <span class="selector-tag">border-collapse</span> <span class="selector-tag">collapse</span></span><br><span class="line">      <span class="selector-tag">border-spacing</span> 0</span><br><span class="line">      <span class="selector-tag">margin-top</span>: 1<span class="selector-tag">em</span></span><br><span class="line">      <span class="selector-tag">th</span></span><br><span class="line">        <span class="selector-tag">font-weight</span> <span class="selector-tag">bold</span></span><br><span class="line">        <span class="selector-tag">border</span> 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ddd</span></span><br><span class="line">        <span class="selector-tag">padding</span> 6<span class="selector-tag">px</span> 13<span class="selector-tag">px</span></span><br><span class="line">      <span class="selector-tag">td</span> </span><br><span class="line">        <span class="selector-tag">border</span> 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ddd</span></span><br><span class="line">        <span class="selector-tag">padding</span> 6<span class="selector-tag">px</span> 13<span class="selector-tag">px</span></span><br><span class="line">    <span class="selector-class">.pullquote</span></span><br><span class="line">      <span class="selector-tag">text-align</span> <span class="selector-tag">left</span></span><br><span class="line">      <span class="selector-tag">width</span> 45%</span><br><span class="line">      <span class="selector-tag">margin</span> 0</span><br><span class="line">      <span class="selector-tag">border</span> <span class="selector-tag">none</span></span><br><span class="line">    <span class="selector-class">.left</span></span><br><span class="line">      <span class="selector-tag">margin-left</span> 0<span class="selector-class">.5em</span></span><br><span class="line">      <span class="selector-tag">margin-right</span> 1<span class="selector-tag">em</span></span><br><span class="line">      <span class="selector-tag">float</span> <span class="selector-tag">left</span></span><br><span class="line">    <span class="selector-class">.right</span></span><br><span class="line">      <span class="selector-tag">margin-right</span> 0<span class="selector-class">.5em</span></span><br><span class="line">      <span class="selector-tag">margin-left</span> 1<span class="selector-tag">em</span></span><br><span class="line">      <span class="selector-tag">float</span> <span class="selector-tag">right</span></span><br><span class="line">	<span class="selector-tag">table</span> <span class="selector-tag">th</span>  </span><br><span class="line">	  <span class="selector-tag">text-align</span> <span class="selector-tag">center</span></span><br><span class="line">	  <span class="selector-tag">background-color</span> <span class="selector-id">#f8f8f8</span></span><br><span class="line">	<span class="selector-tag">table</span> <span class="selector-tag">tr</span></span><br><span class="line">	  <span class="selector-tag">background-color</span> <span class="selector-id">#fff</span></span><br><span class="line">	  &amp;<span class="selector-pseudo">:nth-child(2n)</span></span><br><span class="line">	    <span class="selector-tag">background-color</span> <span class="selector-id">#f8f8f8</span>	</span><br><span class="line"><span class="selector-class">.highlight</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span></span><br><span class="line">  <span class="selector-tag">background</span> <span class="selector-tag">none</span></span><br></pre></td></tr></table></figure>
@@ -367,69 +110,13 @@
 <p>admin-&gt; 设置 -&gt; 基本设置 -&gt; 自定义css <code>复制以下内容到文本域</code></p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*UA Start*/</span></span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.this_ua</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ccc</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">5px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">1px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#BBB</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Windows</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#39b3d7</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#46b8da</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Linux</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#3A3A3A</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#1F1F1F</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Ubuntu</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#DD4814</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#DD4814</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Mac</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#666666</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#666666</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.Android</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#98C13D</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#98C13D</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.platform</span><span class="selector-class">.iOS</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#666666</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#666666</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Chrome</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#EE6252</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#EE6252</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Chromium</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#EE6252</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#EE6252</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Firefox</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f0ad4e</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#eea236</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.IE</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#428bca</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#357ebd</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Edge</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#428bca</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#357ebd</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Opera</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#d9534f</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#d43f3a</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Maxthon</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#7373B9</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#7373B9</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.browser</span><span class="selector-class">.Safari</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#666666</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#666666</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.this_ua</span><span class="selector-class">.sskadmin</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#00a67c</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#00a67c</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*UA End*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Head Start*/</span></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">ul</span><span class="selector-class">.ds-comments-tabs</span> <span class="selector-tag">li</span><span class="selector-class">.ds-tab</span> <span class="selector-tag">a</span><span class="selector-class">.ds-current</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#6D6D6B</span>;</span><br><span class="line">    <span class="attribute">text-shadow</span>: none;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#F3F3F3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-highlight</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Microsoft YaHei, <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, Sans-serif;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#6D6D6B</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">ul</span><span class="selector-class">.ds-comments-tabs</span> <span class="selector-tag">li</span><span class="selector-class">.ds-tab</span> <span class="selector-tag">a</span><span class="selector-class">.ds-current</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#696a52</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#F2F2F2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">a</span><span class="selector-class">.ds-highlight</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#696a52</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">li</span><span class="selector-class">.ds-post</span>,<span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-id">#ds-hot-posts</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: visible;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-self</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">li</span><span class="selector-class">.ds-post</span>,<span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-post-self</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span>, <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">ul</span><span class="selector-class">.ds-children</span> <span class="selector-class">.ds-avatar</span> &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: -<span class="number">1px</span> <span class="number">0</span> <span class="number">1px</span> <span class="built_in">rgba</span>(0,0,0,.15) inset;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">46px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FAFAFA</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">32px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">32px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#b9baa6</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-class">.ds-avatar</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-replybox</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">ul</span><span class="selector-class">.ds-children</span> <span class="selector-class">.ds-replybox</span><span class="selector-class">.ds-inline-replybox</span> <span class="selector-tag">a</span><span class="selector-class">.ds-avatar</span>,</span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-replybox</span><span class="selector-class">.ds-inline-replybox</span> <span class="selector-tag">a</span><span class="selector-class">.ds-avatar</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: none;</span><br><span class="line">    <span class="attribute">box-shadow</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-replybox</span><span class="selector-class">.ds-inline-replybox</span> <span class="selector-tag">a</span><span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-replybox</span> <span class="selector-tag">a</span><span class="selector-class">.ds-avatar</span>,</span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-replybox</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">32px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">32px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.22);</span><br><span class="line">    <span class="attribute">-webkit-transition</span>: .<span class="number">8s</span> all ease-in-out;</span><br><span class="line">    <span class="attribute">-moz-transition</span>: .<span class="number">4s</span> all ease-in-out;</span><br><span class="line">    <span class="attribute">-o-transition</span>: .<span class="number">4s</span> all ease-in-out;</span><br><span class="line">    <span class="attribute">-ms-transition</span>: .<span class="number">4s</span> all ease-in-out;</span><br><span class="line">    <span class="attribute">transition</span>: .<span class="number">4s</span> all ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ds-post-self</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.ds-avatar</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">rotateX</span>(360deg);</span><br><span class="line">    <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(360deg);</span><br><span class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(360deg);</span><br><span class="line">    <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(360deg);</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comment-body</span> &#123;</span><br><span class="line">    <span class="attribute">-webkit-transition-delay</span>: initial;</span><br><span class="line">    <span class="attribute">-webkit-transition-duration</span>: <span class="number">0.4s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-property</span>: all;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: initial;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#F7F7F7</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span> <span class="number">15px</span> <span class="number">15px</span> <span class="number">47px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">#B8B9B9</span> <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border</span>: white <span class="number">1px</span> solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-tag">ul</span><span class="selector-class">.ds-children</span> <span class="selector-class">.ds-comment-body</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comment-body</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#787968</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comments</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-powered-by</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comments</span> <span class="selector-tag">a</span><span class="selector-class">.ds-user-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: normal;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#3D3D3D</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comments</span> <span class="selector-tag">a</span><span class="selector-class">.ds-user-name</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#D32</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-id">#ds-bubble</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-id">#ds-hot-posts</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-reset</span> <span class="selector-id">#ds-hot-posts</span> <span class="selector-class">.ds-gradient-bg</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comment-body</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#F1F1F1</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-delay</span>: initial;</span><br><span class="line">    <span class="attribute">-webkit-transition-duration</span>: <span class="number">0.4s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-property</span>: all;</span><br><span class="line">    <span class="attribute">-webkit-transition-timing-function</span>: initial;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Head End*/</span></span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/duoshuo/">duoshuo</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/css/">css</a><a href="/tags/duoshuo/">duoshuo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/10/duoshuostyle/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/10/duoshuostyle/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
+]]></content>
+    </entry>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/09/ES6/" title="JavaScript Style Guide" itemprop="url">JavaScript Style Guide</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-09T06:37:23.295Z" itemprop="datePublished"> 发表于 2016-05-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="Airbnb-JavaScript-Style-Guide"><a href="#Airbnb-JavaScript-Style-Guide" class="headerlink" title="Airbnb JavaScript Style Guide() {"></a>Airbnb JavaScript Style Guide() {</h1><h2 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h2><p>  <a name="types--primitives"></a><a name="1.1"></a></p>
+    <entry>
+      <title><![CDATA[JavaScript Style Guide]]></title>
+      <url>http://ansonchen.github.io/2016/05/09/ES6/</url>
+      <content type="html"><![CDATA[<h1 id="Airbnb-JavaScript-Style-Guide"><a href="#Airbnb-JavaScript-Style-Guide" class="headerlink" title="Airbnb JavaScript Style Guide() {"></a>Airbnb JavaScript Style Guide() {</h1><h2 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h2><p>  <a name="types--primitives"></a><a name="1.1"></a></p>
 <ul>
 <li><p><a href="#types--primitives">1.1</a> <strong>Primitives</strong>: When you access a primitive type you work directly on its value.</p>
 <ul>
@@ -1331,416 +1018,21 @@
 <p>The above copyright notice and this permission notice shall be<br>included in all copies or substantial portions of the Software.</p>
 <p>THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND,<br>EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF<br>MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.<br>IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY<br>CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,<br>TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE<br>SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <h2 id="Amendments"><a href="#Amendments" class="headerlink" title="Amendments"></a>Amendments</h2><p>We encourage you to fork this guide and change the rules to fit your team’s style guide. Below, you may list some amendments to the style guide. This allows you to periodically update your style guide without having to deal with merge conflicts.</p>
-<h1 id=""><a href="#" class="headerlink" title="};"></a>};</h1>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/ES5/">ES5</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/09/ES6/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/09/ES6/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
+<h1 id=""><a href="#" class="headerlink" title="};"></a>};</h1>]]></content>
+    </entry>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/06/hello-world/" title="Hexo 相关" itemprop="url">Hexo 相关</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-06T08:10:20.977Z" itemprop="datePublished"> 发表于 2016-05-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><a href="https://hexo.io/" target="_blank" rel="external">Hexo 官网</a><br><a href="https://hexo.io/docs/" target="_blank" rel="external">文档</a><br><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub 问题</a>.</p>
+    <entry>
+      <title><![CDATA[Hexo 相关]]></title>
+      <url>http://ansonchen.github.io/2016/05/06/hello-world/</url>
+      <content type="html"><![CDATA[<p><a href="https://hexo.io/" target="_blank" rel="external">Hexo 官网</a><br><a href="https://hexo.io/docs/" target="_blank" rel="external">文档</a><br><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub 问题</a>.</p>
 <h2 id="添加-Tag-和-categories"><a href="#添加-Tag-和-categories" class="headerlink" title="添加 Tag 和 categories"></a>添加 Tag 和 categories</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: page title</span><br><span class="line">tag:[常见问题,Hexo,github]</span><br><span class="line">categories: Hexo</span><br></pre></td></tr></table></figure>
 <p>or</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: page title</span><br><span class="line">tag:</span><br><span class="line">  - 前端</span><br><span class="line">  - Hexo</span><br><span class="line">  - HTML</span><br><span class="line">  - JavaScript</span><br><span class="line">categories: Hexo</span><br></pre></td></tr></table></figure>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br><span class="line"></span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line">hexo n page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
 <h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.2 --save</span><br><span class="line">npm install hexo-generator-feed@1 --save</span><br><span class="line">npm install hexo-generator-sitemap@1 --save</span><br></pre></td></tr></table></figure>
-<h2 id="安装完插件的-package-json"><a href="#安装完插件的-package-json" class="headerlink" title="安装完插件的 package.json"></a>安装完插件的 package.json</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"hexo"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"3.2.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"hexo"</span>: <span class="string">"^3.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-git"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-heroku"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-openshift"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-rsync"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^0.1.4"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-feed"</span>: <span class="string">"^1.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-index"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-sitemap"</span>: <span class="string">"^1.1.2"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^0.2.10"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^0.2.3"</span>,</span><br><span class="line">    <span class="string">"hexo-server"</span>: <span class="string">"^0.1.3"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-</div>
-
-
-  <div class="article-tags">
+<h2 id="安装完插件的-package-json"><a href="#安装完插件的-package-json" class="headerlink" title="安装完插件的 package.json"></a>安装完插件的 package.json</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"hexo"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"3.2.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"hexo"</span>: <span class="string">"^3.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-git"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-heroku"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-openshift"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-rsync"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^0.1.4"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-feed"</span>: <span class="string">"^1.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-index"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-sitemap"</span>: <span class="string">"^1.1.2"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^0.2.10"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^0.2.3"</span>,</span><br><span class="line">    <span class="string">"hexo-server"</span>: <span class="string">"^0.1.3"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a><a href="/tags/github/">github</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/06/hello-world/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/06/hello-world/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
   
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/chrome/" title="chrome">chrome<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/md/" title="md">md<sup>1</sup></a></li>
-		  
-		
-		</ul>
-</div>
-
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/jacman/" title="jacman">jacman<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/chrome/" title="chrome">chrome<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/css/" title="css">css<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/search/" title="search">search<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/md/" title="md">md<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/tag/" title="tag">tag<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ES5/" title="ES5">ES5<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" title="css-tricks">css-tricks</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://echarts.baidu.com/" target="_blank" title="echarts">echarts</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello ,I&#39;m Ansonchen in GZB. <br/>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		
-		<a href="https://github.com/https://github.com/ansonchen" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		
-		<a href="https://twitter.com/https://twitter.com/ansontw" target="_blank" class="icon-twitter" title="twitter"></a>
-		
-		
-		<a href="https://www.facebook.com/https://www.facebook.com/anson.chen.501" target="_blank" class="icon-facebook" title="facebook"></a>
-		
-		
-		
-		
-		
-		<a href="https://plus.google.com/101799212101565496157?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
-		
-		
-		<a href="mailto:chen.tiansong@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-			
-		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
-		
-		<a href="/about" target="_blank" title="ansonchen">ansonchen</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-<script src="/js/search.js"></script> 
-	<script type="text/javascript">    
-		if(document.getElementById('local-search-result')){
-     	var path = "/search.xml";
-     	searchFunc(path, 'local-search-input', 'local-search-result');
-			}
-   </script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
-});
-</script>
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c8fe478c2ea12ef042ac60a2b0efe07c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
-
-  </body>
- </html>
+</search>

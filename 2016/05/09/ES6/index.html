@@ -1145,6 +1145,10 @@ undefined
 		  
 		
 		  
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/md/" title="md">md<sup>1</sup></a></li>
 		  
 		
@@ -1158,11 +1162,31 @@ undefined
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/jacman/" title="jacman">jacman<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/css/" title="css">css<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/search/" title="search">search<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
 			
 		
 			
@@ -1187,14 +1211,6 @@ undefined
 		
 			
 				<li><a href="/tags/ES5/" title="ES5">ES5<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/chrome/" title="chrome">chrome<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -1278,7 +1294,13 @@ undefined
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 <script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
+<script src="/js/search.js"></script> 
+	<script type="text/javascript">    
+		if(document.getElementById('local-search-result')){
+     	var path = "/search.xml";
+     	searchFunc(path, 'local-search-input', 'local-search-result');
+			}
+   </script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){

@@ -1,0 +1,602 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>动手打造无依赖 hexo search (基于jacman) | html + css + js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="ansonchen">
+    
+
+    
+    <meta name="description" content="说明网上对hexo的搜索基本上都是依赖于google、x度、swiftype的，区区一个搜索，何必依赖于第三方，哈哈，只见我大笔一挥，留下四个字，easy job.
+具体修改方法
+搜索结果预览，可以在本站输入试试
+
+
+前提安装 jacman 主题
+安装 hexo-generator-search
+1$ npm install hexo-generator-search --save
+配置根目录_c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动手打造无依赖 hexo search (基于jacman)">
+<meta property="og:url" content="http://ansonchen.github.io/2016/05/10/hexosearch/index.html">
+<meta property="og:site_name" content="html + css + js">
+<meta property="og:description" content="说明网上对hexo的搜索基本上都是依赖于google、x度、swiftype的，区区一个搜索，何必依赖于第三方，哈哈，只见我大笔一挥，留下四个字，easy job.
+具体修改方法
+搜索结果预览，可以在本站输入试试
+
+
+前提安装 jacman 主题
+安装 hexo-generator-search
+1$ npm install hexo-generator-search --save
+配置根目录_c">
+<meta property="og:image" content="http://ansonchen.github.io/img/other/searchresult.png">
+<meta property="og:image" content="http://ansonchen.github.io/img/other/jsadd.png">
+<meta property="og:updated_time" content="2016-05-10T09:15:59.887Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动手打造无依赖 hexo search (基于jacman)">
+<meta name="twitter:description" content="说明网上对hexo的搜索基本上都是依赖于google、x度、swiftype的，区区一个搜索，何必依赖于第三方，哈哈，只见我大笔一挥，留下四个字，easy job.
+具体修改方法
+搜索结果预览，可以在本站输入试试
+
+
+前提安装 jacman 主题
+安装 hexo-generator-search
+1$ npm install hexo-generator-search --save
+配置根目录_c">
+<meta name="twitter:image" content="http://ansonchen.github.io/img/other/searchresult.png">
+<meta name="twitter:creator" content="@https://twitter.com/ansontw">
+<link rel="publisher" href="101799212101565496157">
+
+    
+    <link rel="alternative" href="/atom.xml" title="html + css + js" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/lemur_256.png" alt="html + css + js" title="html + css + js"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="html + css + js">html + css + js</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/05/10/hexosearch/" title="动手打造无依赖 hexo search (基于jacman)" itemprop="url">动手打造无依赖 hexo search (基于jacman)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
+		
+  <p class="article-time">
+    <time datetime="2016-05-10T08:20:48.699Z" itemprop="datePublished"> 发表于 2016-05-10</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#具体修改方法"><span class="toc-number">1.1.</span> <span class="toc-text">具体修改方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前提"><span class="toc-number">1.1.1.</span> <span class="toc-text">前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">1.1.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改相关文件"><span class="toc-number">1.1.3.</span> <span class="toc-text">修改相关文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enjoy-The-End"><span class="toc-number">1.1.4.</span> <span class="toc-text">Enjoy. The End.</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>网上对hexo的搜索基本上都是依赖于<code>google</code>、<code>x度</code>、<code>swiftype</code>的，区区一个搜索，何必依赖于第三方，哈哈，只见我大笔一挥，留下四个字，easy job.</p>
+<h2 id="具体修改方法"><a href="#具体修改方法" class="headerlink" title="具体修改方法"></a>具体修改方法</h2><blockquote>
+<p>搜索结果预览，可以在本站输入试试</p>
+</blockquote>
+<p><img src="/img/other/searchresult.png" alt=""></p>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p><a href="https://github.com/wuchong/jacman" target="_blank" rel="external">安装 jacman 主题</a></p>
+<p><a href="https://www.npmjs.com/package/hexo-generator-search" target="_blank" rel="external">安装 hexo-generator-search</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><code>根目录_config.yml</code> 文件最后添加</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure>
+<p>生成<code>search.xml</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>修改 <code>themes\jacman\_config.yml</code> ,启用谷歌搜索</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">google_cse: </span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改相关文件"><a href="#修改相关文件" class="headerlink" title="修改相关文件"></a>修改相关文件</h3><p>修改 <code>themes\jacman\layout\_partial\search.ejs</code> ,内容为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>  <span class="attr">id</span>=<span class="string">"main"</span> <span class="attr">class</span>=<span class="string">"page"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"local-search-input"</span> <span class="attr">class</span>=<span class="string">"local-search-input"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"local-search-result"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>修改 <code>themes\jacman\layout\_partial\after_footer.ejs</code>,在第4行后面插入,如图所示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"&lt;%- config.root %&gt;js/search.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript">    </span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">document</span>.getElementById(<span class="string">'local-search-result'</span>))&#123;</span><br><span class="line">     	<span class="keyword">var</span> path = <span class="string">"/search.xml"</span>;</span><br><span class="line">     	searchFunc(path, <span class="string">'local-search-input'</span>, <span class="string">'local-search-result'</span>);</span><br><span class="line">			&#125;</span><br><span class="line">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/other/jsadd.png" alt=""></p>
+<p>修改样式 <code>themes\jacman\source\css\_partial\article.styl</code>，在文件最后插入</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.search-result-list</span></span><br><span class="line">  <span class="selector-tag">background</span> <span class="selector-id">#ddd</span></span><br><span class="line"><span class="selector-class">.local-search-input</span></span><br><span class="line">  <span class="selector-tag">width</span> 90%</span><br><span class="line">  <span class="selector-tag">height</span> 34<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">padding</span> 6<span class="selector-tag">px</span> 12<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">margin</span> 20<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">font-size</span> 14<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">line-height</span>: 34<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-id">#555555</span></span><br><span class="line">  <span class="selector-tag">background</span> <span class="selector-id">#ffffff</span></span><br><span class="line">  <span class="selector-tag">border</span> 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#cccccc</span></span><br><span class="line">  <span class="selector-tag">border-radius</span> 4<span class="selector-tag">px</span></span><br><span class="line">  <span class="selector-tag">box-shadow</span> <span class="selector-tag">inset</span> 0 1<span class="selector-tag">px</span> 1<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.075</span>)</span><br></pre></td></tr></table></figure>
+<p>添加<code>search.js</code> 文件到目录 <code>themes\jacman\source\js</code> 文件内容如下，可直接下载本站文件<a href="/js/search.js">search.js</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)</span></span><br><span class="line"><span class="comment">// Copyright (C) 2015 </span></span><br><span class="line"><span class="comment">// Joseph Pan &lt;http://github.com/wzpan&gt;</span></span><br><span class="line"><span class="comment">// Shuhao Mao &lt;http://github.com/maoshuhao&gt;</span></span><br><span class="line"><span class="comment">// This library is free software; you can redistribute it and/or modify</span></span><br><span class="line"><span class="comment">// it under the terms of the GNU Lesser General Public License as</span></span><br><span class="line"><span class="comment">// published by the Free Software Foundation; either version 2.1 of the</span></span><br><span class="line"><span class="comment">// License, or (at your option) any later version.</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// This library is distributed in the hope that it will be useful, but</span></span><br><span class="line"><span class="comment">// WITHOUT ANY WARRANTY; without even the implied warranty of</span></span><br><span class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></span><br><span class="line"><span class="comment">// Lesser General Public License for more details.</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// You should have received a copy of the GNU Lesser General Public</span></span><br><span class="line"><span class="comment">// License along with this library; if not, write to the Free Software</span></span><br><span class="line"><span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA</span></span><br><span class="line"><span class="comment">// 02110-1301 USA</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Modify:Ansonchen 75526201@qq.com </span></span><br><span class="line"></span><br><span class="line">      		</span><br><span class="line"><span class="keyword">var</span> searchPost = <span class="function"><span class="keyword">function</span>(<span class="params">key,datas,resultObj</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">var</span> str=<span class="string">'&lt;div class=\"search-result-list\"&gt;'</span>;                </span><br><span class="line">                <span class="keyword">var</span> keywords = key.trim().toLowerCase().split(<span class="regexp">/[\s\-]+/</span>);</span><br><span class="line">				</span><br><span class="line">                resultObj.innerHTML = <span class="string">""</span>;</span><br><span class="line">                <span class="keyword">if</span> (key.trim().length &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                datas.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> isMatch = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">var</span> content_index = [];                                                       </span><br><span class="line">                    <span class="keyword">if</span> (!data.title || data.title.trim() === <span class="string">''</span>) &#123;</span><br><span class="line">                        data.title = <span class="string">"Untitled"</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">var</span> data_title = data.title.trim().toLowerCase();     </span><br><span class="line">                    <span class="keyword">var</span> data_content = data.content.trim().replace(<span class="regexp">/&lt;[^&gt;]+&gt;/g</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line">                    <span class="keyword">var</span> data_url = data.url;</span><br><span class="line">                    <span class="keyword">var</span> index_title = <span class="number">-1</span>;</span><br><span class="line">                    <span class="keyword">var</span> index_content = <span class="number">-1</span>;</span><br><span class="line">                    <span class="keyword">var</span> first_occur = <span class="number">-1</span>;</span><br><span class="line">                    <span class="comment">// only match artiles with not empty contents</span></span><br><span class="line">                    <span class="keyword">if</span> (data_content !== <span class="string">''</span>) &#123;</span><br><span class="line">                        keywords.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">keyword, i</span>) </span>&#123;</span><br><span class="line">                            index_title = data_title.indexOf(keyword);</span><br><span class="line">                            index_content = data_content.indexOf(keyword);</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>( index_title &lt; <span class="number">0</span> &amp;&amp; index_content &lt; <span class="number">0</span> )&#123;</span><br><span class="line">                                isMatch = <span class="literal">false</span>;</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                <span class="keyword">if</span> (index_content &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                                    index_content = <span class="number">0</span>;</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                                    first_occur = index_content;</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="comment">// content_index.push(&#123;index_content:index_content, keyword_len:keyword_len&#125;);</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        isMatch = <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">// show search results</span></span><br><span class="line">                    <span class="keyword">if</span> (isMatch) &#123;</span><br><span class="line">                        str += <span class="string">"&lt;article class='post-expand post' itemprop='articleBody'&gt;&lt;header class='article-info clearfix'&gt;&lt;h1 itemprop='name'&gt;&lt;a href='"</span>+ data_url +<span class="string">"' class='search-result-title'&gt;"</span>+ data_title +<span class="string">"&lt;/a&gt;&lt;/h1&gt;&lt;/header&gt;&lt;div class='article-content'&gt;"</span>;</span><br><span class="line">                        <span class="keyword">var</span> content = data.content.trim().replace(<span class="regexp">/&lt;[^&gt;]+&gt;/g</span>,<span class="string">""</span>);</span><br><span class="line">                        <span class="keyword">if</span> (first_occur &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                            <span class="comment">// cut out 100 characters</span></span><br><span class="line">                            <span class="keyword">var</span> start = first_occur - <span class="number">20</span>;</span><br><span class="line">                            <span class="keyword">var</span> end = first_occur + <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>(start &lt; <span class="number">0</span>)&#123;</span><br><span class="line">                                start = <span class="number">0</span>;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>(start == <span class="number">0</span>)&#123;</span><br><span class="line">                                end = <span class="number">100</span>;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">if</span>(end &gt; content.length)&#123;</span><br><span class="line">                                end = content.length;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="keyword">var</span> match_content = content.substr(start, end); </span><br><span class="line"></span><br><span class="line">                            <span class="comment">// highlight all keywords</span></span><br><span class="line">                            keywords.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">keyword</span>)</span>&#123;</span><br><span class="line">                                <span class="keyword">var</span> regS = <span class="keyword">new</span> <span class="built_in">RegExp</span>(keyword, <span class="string">"gi"</span>);</span><br><span class="line">                                match_content = match_content.replace(regS, <span class="string">"&lt;code class=\"search-keyword\"&gt;"</span>+keyword+<span class="string">"&lt;/code&gt;"</span>);</span><br><span class="line">                            &#125;);</span><br><span class="line">                            </span><br><span class="line">                            str += <span class="string">"&lt;p class=\"search-result\"&gt;"</span> + match_content +<span class="string">"...&lt;/p&gt;"</span></span><br><span class="line">                        &#125;</span><br><span class="line">                        str += <span class="string">"&lt;/div&gt;&lt;footer class='article-footer clearfix'&gt;&lt;/footer&gt;&lt;/article&gt;"</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">                str += <span class="string">"&lt;/div&gt;"</span>;</span><br><span class="line">                resultObj.innerHTML = str;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> searchFunc = <span class="function"><span class="keyword">function</span>(<span class="params">path, search_id, content_id</span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url: path,</span><br><span class="line">        dataType: <span class="string">"xml"</span>,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params"> xmlResponse </span>) </span>&#123;</span><br><span class="line">            <span class="comment">// get the contents from search data</span></span><br><span class="line">            <span class="keyword">var</span> datas = $( <span class="string">"entry"</span>, xmlResponse ).map(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    title: $( <span class="string">"title"</span>, <span class="keyword">this</span> ).text(),</span><br><span class="line">                    content: $(<span class="string">"content"</span>,<span class="keyword">this</span>).text(),</span><br><span class="line">                    url: $( <span class="string">"url"</span> , <span class="keyword">this</span>).text()</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;).get();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> $input = <span class="built_in">document</span>.getElementById(search_id);</span><br><span class="line">            <span class="keyword">var</span> $resultContent = <span class="built_in">document</span>.getElementById(content_id);</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">var</span> match = location.search.match(<span class="regexp">/q=([^&amp;]*)(&amp;|$)/</span>);			</span><br><span class="line">			<span class="keyword">if</span>(match &amp;&amp; match[<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">var</span> keys = <span class="built_in">decodeURIComponent</span>(match[<span class="number">1</span>]); </span><br><span class="line">				</span><br><span class="line">				searchPost(keys,datas,$resultContent);</span><br><span class="line">				$input.value = keys;</span><br><span class="line">			  &#125;</span><br><span class="line">			</span><br><span class="line">            $input.addEventListener(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">				</span><br><span class="line">				 <span class="keyword">var</span> keys = <span class="keyword">this</span>.value;				</span><br><span class="line">				 searchPost(keys,datas,$resultContent);</span><br><span class="line">            &#125;);</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Enjoy-The-End"><a href="#Enjoy-The-End" class="headerlink" title="Enjoy. The End."></a>Enjoy. The End.</h3>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/hexo/">hexo</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/search/">search</a><a href="/tags/jacman/">jacman</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://ansonchen.github.io/2016/05/10/hexosearch/" data-title="动手打造无依赖 hexo search (基于jacman) | html + css + js" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/05/10/google/"  title="chrome 直接下载官方安装包">
+ <strong>下一篇：</strong><br/> 
+ <span>chrome 直接下载官方安装包
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/05/10/hexosearch/" data-title="动手打造无依赖 hexo search (基于jacman)" data-url="http://ansonchen.github.io/2016/05/10/hexosearch/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#具体修改方法"><span class="toc-number">1.1.</span> <span class="toc-text">具体修改方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前提"><span class="toc-number">1.1.1.</span> <span class="toc-text">前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">1.1.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改相关文件"><span class="toc-number">1.1.3.</span> <span class="toc-text">修改相关文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enjoy-The-End"><span class="toc-number">1.1.4.</span> <span class="toc-text">Enjoy. The End.</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/chrome/" title="chrome">chrome<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/md/" title="md">md<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/jacman/" title="jacman">jacman<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/css/" title="css">css<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/search/" title="search">search<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/md/" title="md">md<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/tag/" title="tag">tag<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ES5/" title="ES5">ES5<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" title="css-tricks">css-tricks</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://echarts.baidu.com/" target="_blank" title="echarts">echarts</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Ansonchen in GZB. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/ansonchen" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/https://twitter.com/ansontw" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/https://www.facebook.com/anson.chen.501" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		
+		
+		
+		<a href="https://plus.google.com/101799212101565496157?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
+		
+		
+		<a href="mailto:chen.tiansong@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="ansonchen">ansonchen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+<script src="/js/search.js"></script> 
+	<script type="text/javascript">    
+		if(document.getElementById('local-search-result')){
+     	var path = "/search.xml";
+     	searchFunc(path, 'local-search-input', 'local-search-result');
+			}
+   </script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"anson83"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c8fe478c2ea12ef042ac60a2b0efe07c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
