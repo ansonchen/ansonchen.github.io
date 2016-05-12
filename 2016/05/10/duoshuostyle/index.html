@@ -28,7 +28,7 @@ jacman 修改样式如下
 
 12345678910111213141516171819202122232425262728293031323334    table      max-width 100%      bo">
 <meta property="og:image" content="http://ansonchen.github.io/img/other/doushou.png">
-<meta property="og:updated_time" content="2016-05-10T09:30:15.754Z">
+<meta property="og:updated_time" content="2016-05-12T03:05:32.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本站自定义样式">
 <meta name="twitter:description" content="本站说明基于 Hexo,采用 jacman 主题，并做部分修改
@@ -124,6 +124,10 @@ jacman 修改样式如下
 <p>替换article.styl 文件内容 查找到<code>table</code> 将<code>table 以后</code>的内容替换成下面的内容</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">table</span></span><br><span class="line">      <span class="selector-tag">max-width</span> 100%</span><br><span class="line">      <span class="selector-tag">border-collapse</span> <span class="selector-tag">collapse</span></span><br><span class="line">      <span class="selector-tag">border-spacing</span> 0</span><br><span class="line">      <span class="selector-tag">margin-top</span>: 1<span class="selector-tag">em</span></span><br><span class="line">      <span class="selector-tag">th</span></span><br><span class="line">        <span class="selector-tag">font-weight</span> <span class="selector-tag">bold</span></span><br><span class="line">        <span class="selector-tag">border</span> 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ddd</span></span><br><span class="line">        <span class="selector-tag">padding</span> 6<span class="selector-tag">px</span> 13<span class="selector-tag">px</span></span><br><span class="line">      <span class="selector-tag">td</span> </span><br><span class="line">        <span class="selector-tag">border</span> 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ddd</span></span><br><span class="line">        <span class="selector-tag">padding</span> 6<span class="selector-tag">px</span> 13<span class="selector-tag">px</span></span><br><span class="line">    <span class="selector-class">.pullquote</span></span><br><span class="line">      <span class="selector-tag">text-align</span> <span class="selector-tag">left</span></span><br><span class="line">      <span class="selector-tag">width</span> 45%</span><br><span class="line">      <span class="selector-tag">margin</span> 0</span><br><span class="line">      <span class="selector-tag">border</span> <span class="selector-tag">none</span></span><br><span class="line">    <span class="selector-class">.left</span></span><br><span class="line">      <span class="selector-tag">margin-left</span> 0<span class="selector-class">.5em</span></span><br><span class="line">      <span class="selector-tag">margin-right</span> 1<span class="selector-tag">em</span></span><br><span class="line">      <span class="selector-tag">float</span> <span class="selector-tag">left</span></span><br><span class="line">    <span class="selector-class">.right</span></span><br><span class="line">      <span class="selector-tag">margin-right</span> 0<span class="selector-class">.5em</span></span><br><span class="line">      <span class="selector-tag">margin-left</span> 1<span class="selector-tag">em</span></span><br><span class="line">      <span class="selector-tag">float</span> <span class="selector-tag">right</span></span><br><span class="line">	<span class="selector-tag">table</span> <span class="selector-tag">th</span>  </span><br><span class="line">	  <span class="selector-tag">text-align</span> <span class="selector-tag">center</span></span><br><span class="line">	  <span class="selector-tag">background-color</span> <span class="selector-id">#f8f8f8</span></span><br><span class="line">	<span class="selector-tag">table</span> <span class="selector-tag">tr</span></span><br><span class="line">	  <span class="selector-tag">background-color</span> <span class="selector-id">#fff</span></span><br><span class="line">	  &amp;<span class="selector-pseudo">:nth-child(2n)</span></span><br><span class="line">	    <span class="selector-tag">background-color</span> <span class="selector-id">#f8f8f8</span>	</span><br><span class="line"><span class="selector-class">.highlight</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span></span><br><span class="line">  <span class="selector-tag">background</span> <span class="selector-tag">none</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面的修改及增加 <a href="/2016/05/10/hexosearch/">搜索功能</a> git</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ansonchen/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>
 <h2 id="多说自定义css"><a href="#多说自定义css" class="headerlink" title="多说自定义css"></a>多说自定义css</h2><p><img src="/img/other/doushou.png" alt=""></p>
 <blockquote>
 <p>admin-&gt; 设置 -&gt; 基本设置 -&gt; 自定义css <code>复制以下内容到文本域</code></p>
@@ -246,7 +250,7 @@ jacman 修改样式如下
 			
 		
 			
-				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+				<li><a href="/tags/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
 			
 		
 			
@@ -254,11 +258,11 @@ jacman 修改样式如下
 			
 		
 			
-				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
+				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
 			
 		
 			
