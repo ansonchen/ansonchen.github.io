@@ -4,35 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo 相关 | html + css + js</title>
+    <title>js 操作 dom 的各种距离 | html + css + js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="ansonchen">
     
 
     
-    <meta name="description" content="Hexo 官网文档GitHub 问题.
-添加 Tag 和 categories123title: page titletag:[常见问题,Hexo,github]categories: Hexo
-or
-1234567title: page titletag:  - 前端  - Hexo  - HTML  - JavaScriptcategories: Hexo
-常用命令12345678910npm">
+    <meta name="description" content="元素显示时，doing...123456789101112131415161718192021222324252627var wh = window.innerHeight;                 //可见窗口高度var bec = div.getBoundingClientRect().top;   //元素相对于窗口高度    if ( (wh -100) &amp;gt; bec  )">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 相关">
-<meta property="og:url" content="http://ansonchen.github.io/2016/05/06/hello-world/index.html">
+<meta property="og:title" content="js 操作 dom 的各种距离">
+<meta property="og:url" content="http://ansonchen.github.io/2016/05/19/jsdom/index.html">
 <meta property="og:site_name" content="html + css + js">
-<meta property="og:description" content="Hexo 官网文档GitHub 问题.
-添加 Tag 和 categories123title: page titletag:[常见问题,Hexo,github]categories: Hexo
-or
-1234567title: page titletag:  - 前端  - Hexo  - HTML  - JavaScriptcategories: Hexo
-常用命令12345678910npm">
-<meta property="og:updated_time" content="2016-05-12T03:07:12.870Z">
+<meta property="og:description" content="元素显示时，doing...123456789101112131415161718192021222324252627var wh = window.innerHeight;                 //可见窗口高度var bec = div.getBoundingClientRect().top;   //元素相对于窗口高度    if ( (wh -100) &amp;gt; bec  )">
+<meta property="og:image" content="http://ansonchen.github.io/img/other/jsdom.png">
+<meta property="og:updated_time" content="2016-05-19T08:22:33.635Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 相关">
-<meta name="twitter:description" content="Hexo 官网文档GitHub 问题.
-添加 Tag 和 categories123title: page titletag:[常见问题,Hexo,github]categories: Hexo
-or
-1234567title: page titletag:  - 前端  - Hexo  - HTML  - JavaScriptcategories: Hexo
-常用命令12345678910npm">
+<meta name="twitter:title" content="js 操作 dom 的各种距离">
+<meta name="twitter:description" content="元素显示时，doing...123456789101112131415161718192021222324252627var wh = window.innerHeight;                 //可见窗口高度var bec = div.getBoundingClientRect().top;   //元素相对于窗口高度    if ( (wh -100) &amp;gt; bec  )">
+<meta name="twitter:image" content="http://ansonchen.github.io/img/other/jsdom.png">
 <meta name="twitter:creator" content="@https://twitter.com/ansontw">
 <link rel="publisher" href="101799212101565496157">
 
@@ -93,14 +83,14 @@ or
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/06/hello-world/" title="Hexo 相关" itemprop="url">Hexo 相关</a>
+      <a href="/2016/05/19/jsdom/" title="js 操作 dom 的各种距离" itemprop="url">js 操作 dom 的各种距离</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-06T08:10:20.977Z" itemprop="datePublished"> 发表于 2016-05-06</time>
+    <time datetime="2016-05-19T08:06:18.963Z" itemprop="datePublished"> 发表于 2016-05-19</time>
     
   </p>
 </header>
@@ -109,31 +99,26 @@ or
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-Tag-和-categories"><span class="toc-number">1.</span> <span class="toc-text">添加 Tag 和 categories</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">2.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装插件"><span class="toc-number">3.</span> <span class="toc-text">安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装完插件的-package-json"><span class="toc-number">4.</span> <span class="toc-text">安装完插件的 package.json</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-基于jacman修改的主题带搜索功能"><span class="toc-number">5.</span> <span class="toc-text">安装  基于jacman修改的主题带搜索功能</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p><a href="https://hexo.io/" target="_blank" rel="external">Hexo 官网</a><br><a href="https://hexo.io/docs/" target="_blank" rel="external">文档</a><br><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub 问题</a>.</p>
-<h2 id="添加-Tag-和-categories"><a href="#添加-Tag-和-categories" class="headerlink" title="添加 Tag 和 categories"></a>添加 Tag 和 categories</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: page title</span><br><span class="line">tag:[常见问题,Hexo,github]</span><br><span class="line">categories: Hexo</span><br></pre></td></tr></table></figure>
-<p>or</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: page title</span><br><span class="line">tag:</span><br><span class="line">  - 前端</span><br><span class="line">  - Hexo</span><br><span class="line">  - HTML</span><br><span class="line">  - JavaScript</span><br><span class="line">categories: Hexo</span><br></pre></td></tr></table></figure>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br><span class="line"></span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line">hexo n page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.2 --save</span><br><span class="line">npm install hexo-generator-feed@1 --save</span><br><span class="line">npm install hexo-generator-sitemap@1 --save</span><br></pre></td></tr></table></figure>
-<h2 id="安装完插件的-package-json"><a href="#安装完插件的-package-json" class="headerlink" title="安装完插件的 package.json"></a>安装完插件的 package.json</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"hexo"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"3.2.0"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"hexo"</span>: <span class="string">"^3.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-git"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-heroku"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-openshift"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-rsync"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^0.1.4"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-feed"</span>: <span class="string">"^1.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-index"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-sitemap"</span>: <span class="string">"^1.1.2"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^0.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^0.2.10"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^0.2.3"</span>,</span><br><span class="line">    <span class="string">"hexo-server"</span>: <span class="string">"^0.1.3"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="安装-基于jacman修改的主题带搜索功能"><a href="#安装-基于jacman修改的主题带搜索功能" class="headerlink" title="安装  基于jacman修改的主题带搜索功能"></a>安装  <a href="/2016/05/10/hexosearch/">基于jacman修改的主题带搜索功能</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ansonchen/jacman.git themes/jacman</span><br></pre></td></tr></table></figure>  
+		<p><img src="/img/other/jsdom.png" alt=""></p>
+<p><code>元素显示时，doing...</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> wh = <span class="built_in">window</span>.innerHeight;                 <span class="comment">//可见窗口高度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bec = div.getBoundingClientRect().top;   <span class="comment">//元素相对于窗口高度</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> ( (wh <span class="number">-100</span>) &gt; bec  ) &#123; <span class="comment">// 元素出现在窗口中</span></span><br><span class="line">      </span><br><span class="line"><span class="comment">//something...</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">window</span>.onscroll = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">var</span> bec = num1.getBoundingClientRect().top;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ( (wh <span class="number">-100</span>) &gt; bec  ) &#123;</span><br><span class="line"></span><br><span class="line">           <span class="comment">//something...</span></span><br><span class="line"></span><br><span class="line">            <span class="built_in">window</span>.onscroll = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  <a class="article-category-link" href="/categories/js/">js</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a><a href="/tags/github/">github</a>
+  <span></span> <a href="/tags/js/">js</a><a href="/tags/dom/">dom</a><a href="/tags/距离/">距离</a>
   </div>
 
 </div>
@@ -142,7 +127,7 @@ or
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://ansonchen.github.io/2016/05/06/hello-world/" data-title="Hexo 相关 | html + css + js" data-tsina="null" class="share clearfix">
+	  <div data-url="http://ansonchen.github.io/2016/05/19/jsdom/" data-title="js 操作 dom 的各种距离 | html + css + js" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -155,20 +140,20 @@ or
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/05/09/ES6/" title="JavaScript Style Guide">
-  <strong>上一篇：</strong><br/>
-  <span>
-  JavaScript Style Guide</span>
+
+<div class="next">
+<a href="/2016/05/13/cssrecord/"  title="常用 css 记录">
+ <strong>下一篇：</strong><br/> 
+ <span>常用 css 记录
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/05/06/hello-world/" data-title="Hexo 相关" data-url="http://ansonchen.github.io/2016/05/06/hello-world/"></div>
+	<div class="ds-thread" data-thread-key="2016/05/19/jsdom/" data-title="js 操作 dom 的各种距离" data-url="http://ansonchen.github.io/2016/05/19/jsdom/"></div>
 </section>
 
 
@@ -178,7 +163,7 @@ or
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-Tag-和-categories"><span class="toc-number">1.</span> <span class="toc-text">添加 Tag 和 categories</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">2.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装插件"><span class="toc-number">3.</span> <span class="toc-text">安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装完插件的-package-json"><span class="toc-number">4.</span> <span class="toc-text">安装完插件的 package.json</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-基于jacman修改的主题带搜索功能"><span class="toc-number">5.</span> <span class="toc-text">安装  基于jacman修改的主题带搜索功能</span></a></li></ol>
+ 
  
   </div>
 
