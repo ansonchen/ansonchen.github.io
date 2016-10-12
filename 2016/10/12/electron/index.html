@@ -1,0 +1,635 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>开始使用 electron | html + css + js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="ansonchen">
+    
+
+    
+    <meta name="description" content="代码库：https://github.com/atom/electron
+官网：http://electron.atom.io/
+API:https://github.com/electron/electron/tree/master/docs/api
+安装设置环境变量为什么要设置环境变量呢？是因为打包或运行的时候需要下载对应的二进制文件，这些二进制文件下载速度奇慢奇慢的，如果我们使用淘宝CDN的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开始使用 electron">
+<meta property="og:url" content="http://ansonchen.github.io/2016/10/12/electron/index.html">
+<meta property="og:site_name" content="html + css + js">
+<meta property="og:description" content="代码库：https://github.com/atom/electron
+官网：http://electron.atom.io/
+API:https://github.com/electron/electron/tree/master/docs/api
+安装设置环境变量为什么要设置环境变量呢？是因为打包或运行的时候需要下载对应的二进制文件，这些二进制文件下载速度奇慢奇慢的，如果我们使用淘宝CDN的">
+<meta property="og:updated_time" content="2016-10-12T09:02:44.288Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开始使用 electron">
+<meta name="twitter:description" content="代码库：https://github.com/atom/electron
+官网：http://electron.atom.io/
+API:https://github.com/electron/electron/tree/master/docs/api
+安装设置环境变量为什么要设置环境变量呢？是因为打包或运行的时候需要下载对应的二进制文件，这些二进制文件下载速度奇慢奇慢的，如果我们使用淘宝CDN的">
+<meta name="twitter:creator" content="@https://twitter.com/ansontw">
+<link rel="publisher" href="101799212101565496157">
+
+    
+    <link rel="alternative" href="/atom.xml" title="html + css + js" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/lemur_256.png" alt="html + css + js" title="html + css + js"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="html + css + js">html + css + js</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/12/electron/" title="开始使用 electron" itemprop="url">开始使用 electron</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-12T08:43:03.205Z" itemprop="datePublished"> 发表于 2016-10-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化项目"><span class="toc-number">2.</span> <span class="toc-text">初始化项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主线程文件-index-js"><span class="toc-number">2.1.</span> <span class="toc-text">主线程文件 index.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#index-html"><span class="toc-number">2.2.</span> <span class="toc-text">index.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-number">2.3.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包"><span class="toc-number">2.4.</span> <span class="toc-text">打包</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p>代码库：<a href="https://github.com/atom/electron" target="_blank" rel="external">https://github.com/atom/electron</a></p>
+<p>官网：<a href="https://github.com/atom/electron" target="_blank" rel="external">http://electron.atom.io/</a></p>
+<p>API:<a href="https://github.com/electron/electron/tree/master/docs/api" target="_blank" rel="external">https://github.com/electron/electron/tree/master/docs/api</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><p>为什么要设置环境变量呢？是因为打包或运行的时候需要下载对应的二进制文件，这些二进制文件下载速度奇慢奇慢的，如果我们使用淘宝CDN的话可以把这速度提升得杠杠的。</p>
+<blockquote>
+<p>如果你是linux用户，设置临时环境变量，直接执行</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果你是windows用户，请依次执行: 计算机-&gt;右键-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;在用于(或者系统)变量下点击-&gt;新建</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">变量名：ELECTRON_MIRROR</span><br><span class="line">变量值：http://npm.taobao.org/mirrors/electron/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>全局安装 electron 及打包工具</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g electron-prebuilt</span><br><span class="line">npm install -g electron-packager</span><br></pre></td></tr></table></figure>
+<h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><blockquote>
+<p>初始化package.json</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<p>一路回车即可。</p>
+<blockquote>
+<p>package.json文件代码示例</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"electron"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">      <span class="string">"start"</span>: <span class="string">"electron ."</span>,</span><br><span class="line">      <span class="string">"build"</span>: <span class="string">"electron-packager ./ electron --platform=win32 --arch=x64 --version=1.0.0 --overwrite"</span>,</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"electron"</span>: <span class="string">"^1.4.1"</span></span><br><span class="line"> &#125;,</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="主线程文件-index-js"><a href="#主线程文件-index-js" class="headerlink" title="主线程文件 index.js"></a>主线程文件 index.js</h3><blockquote>
+<p>代码来自<a href="https://github.com/electron/electron/blob/master/docs-translations/zh-CN/tutorial/quick-start.md" target="_blank" rel="external">https://github.com/electron/electron/blob/master/docs-translations/zh-CN/tutorial/quick-start.md</a></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> electron = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"><span class="comment">// 控制应用生命周期的模块。</span></span><br><span class="line"><span class="keyword">const</span> &#123;app&#125; = electron</span><br><span class="line"><span class="comment">// 创建原生浏览器窗口的模块。</span></span><br><span class="line"><span class="keyword">const</span> &#123;BrowserWindow&#125; = electron</span><br><span class="line"></span><br><span class="line"><span class="comment">// 保持一个对于 window 对象的全局引用，如果你不这样做，</span></span><br><span class="line"><span class="comment">// 当 JavaScript 对象被垃圾回收， window 会被自动地关闭</span></span><br><span class="line"><span class="keyword">let</span> mainWindow</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 创建浏览器窗口。</span></span><br><span class="line">  mainWindow = <span class="keyword">new</span> BrowserWindow(&#123;width: <span class="number">800</span>, height: <span class="number">600</span>&#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 加载应用的 index.html。</span></span><br><span class="line">  mainWindow.loadURL(<span class="string">`file://<span class="subst">$&#123;__dirname&#125;</span>/index.html`</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 启用开发工具。</span></span><br><span class="line">  mainWindow.webContents.openDevTools()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当 window 被关闭，这个事件会被触发。</span></span><br><span class="line">  mainWindow.on(<span class="string">'closed'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="comment">// 取消引用 window 对象，如果你的应用支持多窗口的话，</span></span><br><span class="line">    <span class="comment">// 通常会把多个 window 对象存放在一个数组里面，</span></span><br><span class="line">    <span class="comment">// 与此同时，你应该删除相应的元素。</span></span><br><span class="line">    mainWindow = <span class="literal">null</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Electron 会在初始化后并准备</span></span><br><span class="line"><span class="comment">// 创建浏览器窗口时，调用这个函数。</span></span><br><span class="line"><span class="comment">// 部分 API 在 ready 事件触发后才能使用。</span></span><br><span class="line">app.on(<span class="string">'ready'</span>, createWindow)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当全部窗口关闭时退出。</span></span><br><span class="line">app.on(<span class="string">'window-all-closed'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span></span><br><span class="line">  <span class="comment">// 否则绝大部分应用及其菜单栏会保持激活。</span></span><br><span class="line">  <span class="keyword">if</span> (process.platform !== <span class="string">'darwin'</span>) &#123;</span><br><span class="line">    app.quit()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">'activate'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 在 macOS 上，当点击 dock 图标并且该应用没有打开的窗口时，</span></span><br><span class="line">  <span class="comment">// 绝大部分应用会重新创建一个窗口。</span></span><br><span class="line">  <span class="keyword">if</span> (mainWindow === <span class="literal">null</span>) &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在这文件，你可以续写应用剩下主进程代码。</span></span><br><span class="line"><span class="comment">// 也可以拆分成几个文件，然后用 require 导入。</span></span><br></pre></td></tr></table></figure>
+<h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    We are using node <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">document</span>.write(process.versions.node)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>,</span><br><span class="line">    Chrome <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">document</span>.write(process.versions.chrome)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>,</span><br><span class="line">    and Electron <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">document</span>.write(process.versions.electron)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>.</span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><blockquote>
+<p>electron-prebuilt 是一个 npm 模块，包含所使用的 Electron 预编译版本。 如果你已经用 npm 全局安装了它，你只需要按照如下方式直接运行你的应用</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">electron .</span><br></pre></td></tr></table></figure>
+<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">electron-packager &lt;sourcedir&gt; &lt;appname&gt; --platform=&lt;platform&gt; --arch=&lt;arch&gt; --version=&lt;version&gt;</span><br><span class="line">// 命令示例</span><br><span class="line">electron-packager ./ electron --platform=win32 --arch=x64 --version=1.0.0 --overwrite</span><br></pre></td></tr></table></figure>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/js/">js</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/js/">js</a><a href="/tags/electron/">electron</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://ansonchen.github.io/2016/10/12/electron/" data-title="开始使用 electron | html + css + js" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/10/12/electronbug/" title="electron 遇到的坑">
+  <strong>上一篇：</strong><br/>
+  <span>
+  electron 遇到的坑</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/06/30/ddj/"  title="德道经全文">
+ <strong>下一篇：</strong><br/> 
+ <span>德道经全文
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/10/12/electron/" data-title="开始使用 electron" data-url="http://ansonchen.github.io/2016/10/12/electron/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化项目"><span class="toc-number">2.</span> <span class="toc-text">初始化项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主线程文件-index-js"><span class="toc-number">2.1.</span> <span class="toc-text">主线程文件 index.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#index-html"><span class="toc-number">2.2.</span> <span class="toc-text">index.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-number">2.3.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包"><span class="toc-number">2.4.</span> <span class="toc-text">打包</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/chrome/" title="chrome">chrome<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/css/" title="css">css<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/js/" title="js">js<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/md/" title="md">md<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/德道经/" title="德道经">德道经<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/真气/" title="真气">真气<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/js/" title="js">js<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/距离/" title="距离">距离<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/css/" title="css">css<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/electron/" title="electron">electron<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/duoshuo/" title="duoshuo">duoshuo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/md/" title="md">md<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/tag/" title="tag">tag<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/德道经/" title="德道经">德道经<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node/" title="node">node<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/google/" title="google">google<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/search/" title="search">search<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jacman/" title="jacman">jacman<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/真气/" title="真气">真气<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/dom/" title="dom">dom<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ES5/" title="ES5">ES5<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" title="css-tricks">css-tricks</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://echarts.baidu.com/" target="_blank" title="echarts">echarts</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Ansonchen in GZB. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/ansonchen" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/https://twitter.com/ansontw" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/https://www.facebook.com/anson.chen.501" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		
+		
+		
+		<a href="https://plus.google.com/101799212101565496157?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
+		
+		
+		<a href="mailto:chen.tiansong@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="ansonchen">ansonchen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+<script src="/js/search.js"></script> 
+	<script type="text/javascript">    
+		if(document.getElementById('local-search-result')){
+     	var path = "/search.xml";
+     	searchFunc(path, 'local-search-input', 'local-search-result');
+			}
+   </script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"anson83"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c8fe478c2ea12ef042ac60a2b0efe07c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
