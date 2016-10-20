@@ -4,23 +4,44 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>快速打造静态服务器 | html + css + js</title>
+    <title>nrm (npm源管理) | html + css + js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="ansonchen">
     
 
     
-    <meta name="description" content="前提是已经安装node新建 package.json1234567891011&amp;#123;  &quot;name&quot;: &quot;projectname&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;:&quot;快速打造静态服务器&quot;,  &quot;dependencies&quot;: &amp;#123;  	&quot;express&quot;: &quot;3.4.8&quot;,    &quot;socket.io&quot;: &quot;~0.9.6&quot;,    &quot;mime&quot;">
+    <meta name="description" content="nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：
+
+npmcnpmtaobao
+安装1npm install -g nrm
+使用源列表1nrm ls
+切换 到 taobao1nrm use taobao
+添加源1nrm add  &amp;lt;registry&amp;gt; &amp;lt;url&amp;gt; [home]
+删除源1nrm del  &amp;lt;registry&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速打造静态服务器">
-<meta property="og:url" content="http://ansonchen.github.io/2016/05/27/nodeserver/index.html">
+<meta property="og:title" content="nrm (npm源管理)">
+<meta property="og:url" content="http://ansonchen.github.io/2016/10/20/npm_nrm/index.html">
 <meta property="og:site_name" content="html + css + js">
-<meta property="og:description" content="前提是已经安装node新建 package.json1234567891011&amp;#123;  &quot;name&quot;: &quot;projectname&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;:&quot;快速打造静态服务器&quot;,  &quot;dependencies&quot;: &amp;#123;  	&quot;express&quot;: &quot;3.4.8&quot;,    &quot;socket.io&quot;: &quot;~0.9.6&quot;,    &quot;mime&quot;">
-<meta property="og:updated_time" content="2016-05-27T09:36:05.300Z">
+<meta property="og:description" content="nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：
+
+npmcnpmtaobao
+安装1npm install -g nrm
+使用源列表1nrm ls
+切换 到 taobao1nrm use taobao
+添加源1nrm add  &amp;lt;registry&amp;gt; &amp;lt;url&amp;gt; [home]
+删除源1nrm del  &amp;lt;registry&amp;gt;">
+<meta property="og:updated_time" content="2016-10-20T05:26:40.274Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速打造静态服务器">
-<meta name="twitter:description" content="前提是已经安装node新建 package.json1234567891011&amp;#123;  &quot;name&quot;: &quot;projectname&quot;,  &quot;version&quot;: &quot;1.0.0&quot;,  &quot;description&quot;:&quot;快速打造静态服务器&quot;,  &quot;dependencies&quot;: &amp;#123;  	&quot;express&quot;: &quot;3.4.8&quot;,    &quot;socket.io&quot;: &quot;~0.9.6&quot;,    &quot;mime&quot;">
+<meta name="twitter:title" content="nrm (npm源管理)">
+<meta name="twitter:description" content="nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：
+
+npmcnpmtaobao
+安装1npm install -g nrm
+使用源列表1nrm ls
+切换 到 taobao1nrm use taobao
+添加源1nrm add  &amp;lt;registry&amp;gt; &amp;lt;url&amp;gt; [home]
+删除源1nrm del  &amp;lt;registry&amp;gt;">
 <meta name="twitter:creator" content="@https://twitter.com/ansontw">
 <link rel="publisher" href="101799212101565496157">
 
@@ -81,14 +102,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/27/nodeserver/" title="快速打造静态服务器" itemprop="url">快速打造静态服务器</a>
+      <a href="/2016/10/20/npm_nrm/" title="nrm (npm源管理)" itemprop="url">nrm (npm源管理)</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/101799212101565496157?rel=author" title="ansonchen" target="_blank" itemprop="author">ansonchen</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-27T09:25:49.916Z" itemprop="datePublished"> 发表于 2016-05-27</time>
+    <time datetime="2016-10-20T05:19:30.924Z" itemprop="datePublished"> 发表于 2016-10-20</time>
     
   </p>
 </header>
@@ -97,32 +118,32 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前提是已经安装node"><span class="toc-number">1.</span> <span class="toc-text">前提是已经安装node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建-package-json"><span class="toc-number">2.</span> <span class="toc-text">新建 package.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建-server-js"><span class="toc-number">3.</span> <span class="toc-text">新建 server.js</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">2.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源列表"><span class="toc-number">2.1.</span> <span class="toc-text">源列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换-到-taobao"><span class="toc-number">2.2.</span> <span class="toc-text">切换 到 taobao</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加源"><span class="toc-number">2.3.</span> <span class="toc-text">添加源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除源"><span class="toc-number">2.4.</span> <span class="toc-text">删除源</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h3 id="前提是已经安装node"><a href="#前提是已经安装node" class="headerlink" title="前提是已经安装node"></a>前提是已经安装node</h3><h3 id="新建-package-json"><a href="#新建-package-json" class="headerlink" title="新建 package.json"></a>新建 <code>package.json</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"projectname"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>:<span class="string">"快速打造静态服务器"</span>,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">  	<span class="string">"express"</span>: <span class="string">"3.4.8"</span>,</span><br><span class="line">    <span class="string">"socket.io"</span>: <span class="string">"~0.9.6"</span>,</span><br><span class="line">    <span class="string">"mime"</span>: <span class="string">"~1.2.7"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>npm start</p>
+		<blockquote>
+<p>nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：</p>
 </blockquote>
-<h3 id="新建-server-js"><a href="#新建-server-js" class="headerlink" title="新建 server.js"></a>新建 <code>server.js</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> mime = <span class="built_in">require</span>(<span class="string">'mime'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cache = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">send404</span>(<span class="params">response</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        response.writeHead(<span class="number">404</span>, &#123;<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line">        response.write(<span class="string">'Error 404 : resoure not found'</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendFile</span>(<span class="params">response,filePath,fileContents</span>)</span>&#123;</span><br><span class="line">    response.writeHead(<span class="number">200</span>,&#123;<span class="string">'content-type'</span>:mime.lookup(path.basename(filePath))&#125;);</span><br><span class="line">    <span class="comment">//fs.createReadStream(fileContents).pipe(response);</span></span><br><span class="line">    response.end(fileContents);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">serveStatic</span>(<span class="params">response,cache,absPath</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cache[absPath])&#123;</span><br><span class="line">        sendFile(response,absPath,cache[absPath]);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        fs.exists(absPath,<span class="function"><span class="keyword">function</span>(<span class="params">exists</span>)</span>&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(exists)&#123;</span><br><span class="line">                fs.readFile(absPath,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                        send404(response);</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        cache[absPath]  = data;</span><br><span class="line">                        sendFile(response,absPath,data);</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                &#125;)</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">                 send404(response);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        </span><br><span class="line">        &#125;)</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server  = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> filePath = <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(request.url == <span class="string">'/'</span>)&#123;</span><br><span class="line">        filePath  = <span class="string">'public/index.html'</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    </span><br><span class="line">        filePath  = <span class="string">'public'</span> + request.url;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> absPath = <span class="string">'./'</span> + filePath;</span><br><span class="line">    </span><br><span class="line">    serveStatic(response,cache,absPath);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'server listening on port 3000.'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>node server.js<br>让node一直后台运行 <code>nohup node server.js &amp;</code></p>
-</blockquote>
-  
+<p><a href="https://www.npmjs.org/" target="_blank" rel="external">npm</a><br><a href="http://cnpmjs.org/" target="_blank" rel="external">cnpm</a><br><a href="http://npm.taobao.org/" target="_blank" rel="external">taobao</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="源列表"><a href="#源列表" class="headerlink" title="源列表"></a>源列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+<h3 id="切换-到-taobao"><a href="#切换-到-taobao" class="headerlink" title="切换 到 taobao"></a>切换 到 <code>taobao</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
+<h3 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm add  &lt;registry&gt; &lt;url&gt; [home]</span><br></pre></td></tr></table></figure>
+<h3 id="删除源"><a href="#删除源" class="headerlink" title="删除源"></a>删除源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm del  &lt;registry&gt;</span><br></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/js/">js</a>
+  <a class="article-category-link" href="/categories/npm/">npm</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/js/">js</a><a href="/tags/距离/">距离</a><a href="/tags/node/">node</a>
+  <span></span> <a href="/tags/nrm/">nrm</a><a href="/tags/npm/">npm</a>
   </div>
 
 </div>
@@ -131,7 +152,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://ansonchen.github.io/2016/05/27/nodeserver/" data-title="快速打造静态服务器 | html + css + js" data-tsina="null" class="share clearfix">
+	  <div data-url="http://ansonchen.github.io/2016/10/20/npm_nrm/" data-title="nrm (npm源管理) | html + css + js" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -144,19 +165,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/15/zxyx/" title="真气运行五步功成">
-  <strong>上一篇：</strong><br/>
-  <span>
-  真气运行五步功成</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/05/19/jsdom/"  title="js 操作 dom 的各种距离">
+<a href="/2016/10/12/electronbug/"  title="electron 遇到的坑">
  <strong>下一篇：</strong><br/> 
- <span>js 操作 dom 的各种距离
+ <span>electron 遇到的坑
 </span>
 </a>
 </div>
@@ -165,7 +178,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/05/27/nodeserver/" data-title="快速打造静态服务器" data-url="http://ansonchen.github.io/2016/05/27/nodeserver/"></div>
+	<div class="ds-thread" data-thread-key="2016/10/20/npm_nrm/" data-title="nrm (npm源管理)" data-url="http://ansonchen.github.io/2016/10/20/npm_nrm/"></div>
 </section>
 
 
@@ -175,7 +188,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前提是已经安装node"><span class="toc-number">1.</span> <span class="toc-text">前提是已经安装node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建-package-json"><span class="toc-number">2.</span> <span class="toc-text">新建 package.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建-server-js"><span class="toc-number">3.</span> <span class="toc-text">新建 server.js</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">2.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#源列表"><span class="toc-number">2.1.</span> <span class="toc-text">源列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换-到-taobao"><span class="toc-number">2.2.</span> <span class="toc-text">切换 到 taobao</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加源"><span class="toc-number">2.3.</span> <span class="toc-text">添加源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除源"><span class="toc-number">2.4.</span> <span class="toc-text">删除源</span></a></li></ol></li></ol>
  
   </div>
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ansonchen.github.io/"/>
-  <updated>2016-10-12T09:12:56.572Z</updated>
+  <updated>2016-10-20T05:26:40.274Z</updated>
   <id>http://ansonchen.github.io/</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>nrm (npm源管理)</title>
+    <link href="http://ansonchen.github.io/2016/10/20/npm_nrm/"/>
+    <id>http://ansonchen.github.io/2016/10/20/npm_nrm/</id>
+    <published>2016-10-20T05:19:30.924Z</published>
+    <updated>2016-10-20T05:26:40.274Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://cnpmjs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cnpm&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://npm.taobao.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;taobao&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install -g nrm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;h3 id=&quot;源列表&quot;&gt;&lt;a href=&quot;#源列表&quot; class=&quot;headerlink&quot; title=&quot;源列表&quot;&gt;&lt;/a&gt;源列表&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nrm ls&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;切换-到-taobao&quot;&gt;&lt;a href=&quot;#切换-到-taobao&quot; class=&quot;headerlink&quot; title=&quot;切换 到 taobao&quot;&gt;&lt;/a&gt;切换 到 &lt;code&gt;taobao&lt;/code&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nrm use taobao&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;添加源&quot;&gt;&lt;a href=&quot;#添加源&quot; class=&quot;headerlink&quot; title=&quot;添加源&quot;&gt;&lt;/a&gt;添加源&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nrm add  &amp;lt;registry&amp;gt; &amp;lt;url&amp;gt; [home]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;删除源&quot;&gt;&lt;a href=&quot;#删除源&quot; class=&quot;headerlink&quot; title=&quot;删除源&quot;&gt;&lt;/a&gt;删除源&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nrm del  &amp;lt;registry&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;
+    
+    </summary>
+    
+      <category term="npm" scheme="http://ansonchen.github.io/categories/npm/"/>
+    
+    
+      <category term="nrm" scheme="http://ansonchen.github.io/tags/nrm/"/>
+    
+      <category term="npm" scheme="http://ansonchen.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>electron 遇到的坑</title>
     <link href="http://ansonchen.github.io/2016/10/12/electronbug/"/>
     <id>http://ansonchen.github.io/2016/10/12/electronbug/</id>
     <published>2016-10-12T09:03:32.347Z</published>
-    <updated>2016-10-12T09:12:56.572Z</updated>
+    <updated>2016-10-20T05:16:25.590Z</updated>
     
     <content type="html">&lt;p&gt;代码库：&lt;a href=&quot;https://github.com/atom/electron&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/atom/electron&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;官网：&lt;a href=&quot;https://github.com/atom/electron&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://electron.atom.io/&lt;/a&gt;&lt;/p&gt;
@@ -43,7 +78,7 @@
     
     </summary>
     
-      <category term="js" scheme="http://ansonchen.github.io/categories/js/"/>
+      <category term="electron" scheme="http://ansonchen.github.io/categories/electron/"/>
     
     
       <category term="js" scheme="http://ansonchen.github.io/tags/js/"/>
@@ -57,7 +92,7 @@
     <link href="http://ansonchen.github.io/2016/10/12/electron/"/>
     <id>http://ansonchen.github.io/2016/10/12/electron/</id>
     <published>2016-10-12T08:43:03.205Z</published>
-    <updated>2016-10-12T09:02:44.288Z</updated>
+    <updated>2016-10-20T05:16:21.503Z</updated>
     
     <content type="html">&lt;p&gt;代码库：&lt;a href=&quot;https://github.com/atom/electron&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/atom/electron&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;官网：&lt;a href=&quot;https://github.com/atom/electron&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://electron.atom.io/&lt;/a&gt;&lt;/p&gt;
@@ -102,7 +137,7 @@
     
     </summary>
     
-      <category term="js" scheme="http://ansonchen.github.io/categories/js/"/>
+      <category term="electron" scheme="http://ansonchen.github.io/categories/electron/"/>
     
     
       <category term="js" scheme="http://ansonchen.github.io/tags/js/"/>
@@ -246,9 +281,9 @@
     
       <category term="js" scheme="http://ansonchen.github.io/tags/js/"/>
     
-      <category term="node" scheme="http://ansonchen.github.io/tags/node/"/>
-    
       <category term="距离" scheme="http://ansonchen.github.io/tags/%E8%B7%9D%E7%A6%BB/"/>
+    
+      <category term="node" scheme="http://ansonchen.github.io/tags/node/"/>
     
   </entry>
   
@@ -275,9 +310,9 @@
     
       <category term="js" scheme="http://ansonchen.github.io/tags/js/"/>
     
-      <category term="距离" scheme="http://ansonchen.github.io/tags/%E8%B7%9D%E7%A6%BB/"/>
-    
       <category term="dom" scheme="http://ansonchen.github.io/tags/dom/"/>
+    
+      <category term="距离" scheme="http://ansonchen.github.io/tags/%E8%B7%9D%E7%A6%BB/"/>
     
   </entry>
   

@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[nrm (npm源管理)]]></title>
+      <url>http://ansonchen.github.io/2016/10/20/npm_nrm/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>nrm 是一个 NPM 源管理器，允许你快速地在 NPM 源间切换：</p>
+</blockquote>
+<p><a href="https://www.npmjs.org/" target="_blank" rel="external">npm</a><br><a href="http://cnpmjs.org/" target="_blank" rel="external">cnpm</a><br><a href="http://npm.taobao.org/" target="_blank" rel="external">taobao</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="源列表"><a href="#源列表" class="headerlink" title="源列表"></a>源列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+<h3 id="切换-到-taobao"><a href="#切换-到-taobao" class="headerlink" title="切换 到 taobao"></a>切换 到 <code>taobao</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
+<h3 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm add  &lt;registry&gt; &lt;url&gt; [home]</span><br></pre></td></tr></table></figure>
+<h3 id="删除源"><a href="#删除源" class="headerlink" title="删除源"></a>删除源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm del  &lt;registry&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[electron 遇到的坑]]></title>
       <url>http://ansonchen.github.io/2016/10/12/electronbug/</url>
       <content type="html"><![CDATA[<p>代码库：<a href="https://github.com/atom/electron" target="_blank" rel="external">https://github.com/atom/electron</a></p>
